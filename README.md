@@ -13,6 +13,8 @@ gcloud config set project drawingfire-b72a8 # replace with your gcp project id
 
 - [ ] Add example of incremental models
 - [ ] Add custom assertion
+- [ ] Add example of using a javascript function 
+- [ ] Add a docs.js file where documentation of columns will be pulled from
 - [ ] Create another dataset in BigQuery and connect to it in the pipeline
 
 #### Personal notes 
