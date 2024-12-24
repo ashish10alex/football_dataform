@@ -1,0 +1,12 @@
+config {
+  type: 'table',
+  assertions: {
+    uniqueKey: ["uniqueId"]
+  }
+}
+
+
+SELECT
+  1                AS UNIQUEID
+  , "myData"       AS SOMECOLUMN
+  , CURRENT_DATE() AS TODAYS_DATE
