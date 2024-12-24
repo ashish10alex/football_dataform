@@ -9,6 +9,12 @@ gloud auth application-default login
 gcloud config set project drawingfire-b72a8 # replace with your gcp project id
 ```
 
+#### TODOs
+
+- [ ] Add example of incremental models
+- [ ] Add custom assertion
+- [ ] Create another dataset in BigQuery and connect to it in the pipeline
+
 #### Personal notes 
 
 Create a new Dataform project
