@@ -1,7 +1,7 @@
 
 ### How to use
 
-Open the repository in a VSCode devcontainer  and run the following 
+Open the repository in a [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)  and run the following 
 
 ```bash
 gcloud init
