@@ -2,8 +2,12 @@ config {
   type: 'table',
   schema: 'dataform',
   description: 'Shows mox expensive manchester united player in each season',
+  columns: {...{transfer_date: "date on which transfere from one club to another happened"}, ...docs.columnDescriptions}
 }
 
+pre_operations {
+   SET @@query_label = "key:value";
+}
 
 WITH TRANSFERS AS (
   SELECT * FROM ${ref("TRANSFERS")}
