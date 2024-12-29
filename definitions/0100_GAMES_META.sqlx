@@ -5,7 +5,7 @@ config {
   assertions: {
     uniqueKey: ["game_id"]
   },
-  tags: "FOOTY"
+  tags: ["FOOTY"]
 }
 
 

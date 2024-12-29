@@ -2,7 +2,7 @@ config {
   type: 'table',
   schema: 'dataform',
   description: 'Shows who scored goals for a specific Chelsea vs Arsenal game',
-  tags: "FOOTY"
+  tags: ["FOOTY"]
 }
 
 

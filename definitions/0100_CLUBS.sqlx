@@ -1,8 +1,8 @@
 config {
-  type: 'table',
+  type: 'view',
   schema: 'dataform',
   description: 'data for club',
-  tags: "FOOTY"
+  tags: ["FOOTY"]
 }
 
 select * from 
