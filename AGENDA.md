@@ -1,7 +1,5 @@
 
-
-
-
 1. Features
-3. How to install
-2. Advantages over using Dataform UI
+2. How to install
+3. Advantages over using Dataform UI
+4. How to contribute
