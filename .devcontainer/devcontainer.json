@@ -1,23 +1,4 @@
 {
 	"name": "Ubuntu",
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/dhoeric/features/google-cloud-cli:1": {},
-		"ghcr.io/devcontainers-extra/features/sqlfluff:1": {}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ashishalex.dataform-lsp-vscode",
-                "usernamehw.errorlens"
-			]
-		},
-        "codespaces": {
-			"openFiles": [
-                "README.md"
-			]
-		}
-	},
-	"onCreateCommand": "npm install -g @dataform/cli"
+	"image": "mcr.microsoft.com/devcontainers/base:jammy"
 }
