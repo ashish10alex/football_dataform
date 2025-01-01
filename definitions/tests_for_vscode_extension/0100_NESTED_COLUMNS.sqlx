@@ -1,0 +1,23 @@
+config {
+  type: 'table',
+  assertions: {
+    uniqueKey: ["UUID"]
+  }
+}
+
+
+WITH CTE AS (
+  SELECT
+    GENERATE_UUID()                                  AS UUID
+    , "MY_DATA"                                      AS FOO
+    , ARRAY<STRING>["STRING1", "STRING2", "STRING3"] AS STRINGARRAY
+    , ARRAY(
+      SELECT AS STRUCT * FROM UNNEST(GENERATE_ARRAY(1, 5)) AS POPULATEDARRAYMOREITEMS
+    )                                                AS POPULATEDARRAYMOREITEMS
+    , ARRAY(
+      SELECT AS STRUCT * FROM UNNEST(GENERATE_DATE_ARRAY(CURRENT_DATE(), CURRENT_DATE() + 6, INTERVAL 1 DAY)) AS DATEARRAY
+    )                                                AS DATEARRAY
+  FROM UNNEST(GENERATE_ARRAY(1, 2)) AS ID
+)
+
+SELECT * FROM CTE
