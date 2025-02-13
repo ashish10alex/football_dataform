@@ -1,0 +1,6 @@
+config {
+  type: "table",
+  name: 'att_accounts'
+}
+
+select 1
