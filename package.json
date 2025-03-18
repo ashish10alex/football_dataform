@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@dataform/cli": "^2.9.0",
+    "@dataform/core": "^2.9.0"
+  }
+}
