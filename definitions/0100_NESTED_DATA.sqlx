@@ -1,0 +1,29 @@
+config {
+    type: "table"
+}
+
+SELECT
+  11 as qty,
+  STRUCT(
+    'HELLO WORLD 1' as field_1,
+    'HELLO WORLD 2' as field_2
+  ) as hello,
+      "my_data" as foo,
+      id,
+      ARRAY<STRING>['string1', 'string2', 'string3'] AS StringArray,
+      ARRAY(
+        SELECT AS STRUCT * FROM UNNEST([]) AS EmptyArrayCol
+      ) AS EmptyArray,
+      ARRAY(
+        SELECT AS STRUCT * FROM UNNEST([]) AS AnotherEmptyArrayCol
+      ) AS AnotherEmptyArrayCol,
+      ARRAY(
+        SELECT AS STRUCT * FROM UNNEST(GENERATE_ARRAY(1, 3)) AS PopulatedArrayCol
+      ) AS PopulatedArray,
+      ARRAY(
+        SELECT AS STRUCT * FROM UNNEST(GENERATE_ARRAY(1, 5)) AS PopulatedArrayMoreItems
+      ) AS PopulatedArrayMoreItems,
+      ARRAY(
+        SELECT AS STRUCT * FROM UNNEST(GENERATE_DATE_ARRAY(CURRENT_DATE(), CURRENT_DATE() + 6, INTERVAL 1 day)) AS dateArray
+      ) AS dateArray,
+    FROM UNNEST(GENERATE_ARRAY(1, 2)) AS id
