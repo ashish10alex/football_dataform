@@ -1,13 +1,26 @@
+-- comment here
+
 config {
   type: "incremental",
 }
 
 pre_operations {
-  DECLARE date_checkpoint DEFAULT (
+  -- declaring variable
+  DECLARE MY_VAR INT64;
+  DECLARE date_checkpoint DATE;
+
+  --setting the value of the variable
+  SET MY_VAR = 5;
+
+  -- some comment
+  SET date_checkpoint = (
     ${when(incremental(),
       `SELECT MAX(date) FROM ${self()}`,
-      `SELECT DATE("2012-01-01")`)}
+      `SELECT DATE("2012-01-01")`
+      )}
   );
+
+  -- Another comment at the end
 }
 
 
