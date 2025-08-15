@@ -1,0 +1,5 @@
+config {
+  type: 'table',
+}
+
+SELECT * FROM `drawingfire-b72a8.dataform.sheet_to_bq`
