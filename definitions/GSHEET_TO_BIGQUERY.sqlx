@@ -2,4 +2,9 @@ config {
   type: 'table',
 }
 
+/*
+Need to additionally run `gcloud auth login --enable-gdrive-access --update-adc` to enable google sheet <-> BigQuery 
+Docs: https://docs.getdbt.com/faqs/Troubleshooting/access-gdrive-credential
+*/
+
 SELECT * FROM `drawingfire-b72a8.dataform.sheet_to_bq`
