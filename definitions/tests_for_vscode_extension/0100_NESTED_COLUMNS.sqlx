@@ -10,6 +10,7 @@ config {
 WITH CTE AS (
   SELECT
     99 as tt
+    , 88 as nn
     , CURRENT_DATE() AS todays_date
     , CURRENT_DATETIME() AS todays_date_time
     , GENERATE_UUID()                                  AS UUID
