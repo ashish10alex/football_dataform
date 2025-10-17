@@ -9,7 +9,10 @@ config {
 
 WITH CTE AS (
   SELECT
-    GENERATE_UUID()                                  AS UUID
+    88 as tt
+    , CURRENT_DATE() AS todays_date
+    , CURRENT_DATETIME() AS todays_date_time
+    , GENERATE_UUID()                                  AS UUID
     , "MY_DATA"                                      AS FOO
     , ARRAY<STRING>["STRING1", "STRING2", "STRING3"] AS STRINGARRAY
     , ARRAY(
