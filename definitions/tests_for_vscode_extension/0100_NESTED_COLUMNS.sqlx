@@ -9,7 +9,7 @@ config {
 
 WITH CTE AS (
   SELECT
-    88 as tt
+    99 as tt
     , CURRENT_DATE() AS todays_date
     , CURRENT_DATETIME() AS todays_date_time
     , GENERATE_UUID()                                  AS UUID
