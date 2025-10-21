@@ -4,4 +4,8 @@ config {
   tags: ["nested"]
 }
 
-SELECT 8 AS TEST
+SELECT 
+56 AS TEST,
+"hello world" AS SOME_TEST,
+"bash" AS default_shell,
+CURRENT_DATE AS NEW_DATE

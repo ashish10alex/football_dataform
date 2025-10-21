@@ -12,6 +12,7 @@ WITH CTE AS (
     GENERATE_UUID()                                  AS UUID
     , "ALL_DATA"                                     AS FOO
     , 129                                            AS NUMBER_COLUMN
+    , CURRENT_DATE()                                 AS DATE_COLUMN
     , ARRAY<STRING>["STRING1", "STRING2", "STRING3"] AS STRINGARRAY
     , ARRAY(
       SELECT AS STRUCT * FROM UNNEST(GENERATE_ARRAY(1, 5)) AS POPULATEDARRAYMOREITEMS
