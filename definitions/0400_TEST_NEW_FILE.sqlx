@@ -1,0 +1,6 @@
+config {
+  type: 'table',
+  tags: ["nested"]
+}
+
+SELECT 1 AS TEST
