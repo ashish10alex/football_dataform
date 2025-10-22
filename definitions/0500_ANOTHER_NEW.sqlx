@@ -1,11 +1,10 @@
 
 config {
   type: 'table',
-  tags: ["nested"]
+  tags: ["one", "nested"]
 }
 
 SELECT 
-56 AS TEST,
+123 AS TEST,
 "hello world" AS SOME_TEST,
-"bash" AS default_shell,
-CURRENT_DATE AS NEW_DATE
+"zsh" AS default_shell,
