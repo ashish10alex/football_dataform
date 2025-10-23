@@ -3,4 +3,4 @@ config {
   tags: ["nested", "one"]
 }
 
-SELECT 2 AS TEST
+SELECT 3 AS TEST
