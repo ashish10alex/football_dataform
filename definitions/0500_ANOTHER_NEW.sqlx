@@ -5,6 +5,6 @@ config {
 }
 
 SELECT 
-993 AS NUMBERS,
-"foo_bar" AS SOME_TEST,
+111 AS NUMBERS,
+"FIRST_RUN" AS SOME_TEST,
 "zsh" AS default_shell,
