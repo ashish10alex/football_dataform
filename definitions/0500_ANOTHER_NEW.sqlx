@@ -6,5 +6,5 @@ config {
 
 SELECT 
 111 AS NUMBERS,
-"FIRST_RUN" AS SOME_TEST,
+"SECOND_RUN" AS SOME_TEST,
 "zsh" AS default_shell,
