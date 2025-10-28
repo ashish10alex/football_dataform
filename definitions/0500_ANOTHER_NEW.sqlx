@@ -5,6 +5,6 @@ config {
 }
 
 SELECT 
-111 AS NUMBERS,
-"SECOND_RUN" AS SOME_TEST,
+123 AS NUMBERS,
+"THIRD_RUN" AS SOME_TEST,
 "zsh" AS default_shell,
