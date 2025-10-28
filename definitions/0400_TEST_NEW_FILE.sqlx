@@ -3,4 +3,6 @@ config {
   tags: ["nested", "one"]
 }
 
-SELECT 4 AS TEST
+SELECT 
+11 AS TEST,
+CURRENT_DATE AS NEW_DATE

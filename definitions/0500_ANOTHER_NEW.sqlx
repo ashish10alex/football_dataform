@@ -7,4 +7,4 @@ config {
 SELECT 
 123 AS NUMBERS,
 "THIRD_RUN" AS SOME_TEST,
-"zsh" AS default_shell,
+"fish" AS default_shell,
