@@ -3,7 +3,7 @@ config {
 }
 
 SELECT
-  22 as qty,
+  88 as qty,
   STRUCT(
     'HELLO WORLD 1' as field_1,
     'HELLO WORLD 2' as field_2
