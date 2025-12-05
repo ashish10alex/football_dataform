@@ -36,3 +36,9 @@ database: 'drawingfire-b72a8',
 schema: 'football_data',
 name: 'TRANSFERS',
 });
+
+declare({
+    database: 'drawingfire-b72a8',
+    schema: 'imdb_dataset',
+    name: 'reviews',
+});

@@ -1,6 +1,5 @@
-dataformCoreVersion: 3.0.24
+dataformCoreVersion: 3.0.38
 defaultProject: drawingfire-b72a8
-defaultLocation: europe-west2
 defaultDataset: dataform
 vars: {
     "tableDescription": "something amazing",

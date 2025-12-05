@@ -1,10 +1,8 @@
-
 config {
-  type: 'table',
-  tags: ["one", "nested"]
+  type: 'incremental',
+  onSchemaChange: "EXTEND",
+  tags: ["one"]
 }
 
-SELECT 
-111 AS NUMBERS,
-"SECOND_RUN" AS SOME_TEST,
-"zsh" AS default_shell,
+SELECT
+1 as test
