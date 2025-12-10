@@ -8,7 +8,7 @@ SELECT
     'HELLO WORLD 1' as field_1,
     'HELLO WORLD 2' as field_2
   ) as hello,
-      "my_data" as foo,
+      "bar" as foo,
       id,
       ARRAY<STRING>['string1', 'string2', 'string3'] AS StringArray,
       ARRAY(

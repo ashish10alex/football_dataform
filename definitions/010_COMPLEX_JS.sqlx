@@ -1,0 +1,55 @@
+config {
+  type: "incremental",
+}
+
+
+WITH ${helper.buildIncrementalSliceCte({
+  cteName: "serp_rank_rows",
+  sourceRef: ref({ name: "01_DUMMY_TABLE", schema: "dataform" }),
+  tableAlias: "sm",
+  selectList: `
+    sm.string_col,
+    sm.date_col,
+    CURRENT_DATE -1 AS watermark_lower_bound
+  `,
+  isIncremental: incremental(),
+  timestampColumn: "timestamp_col",
+  dateColumn: "sm.date_col",
+  watermarkVariable: "timestamp_col",
+})}
+
+
+, mart_rows AS (
+  SELECT * FROM serp_rank_rows
+)
+
+SELECT
+  *,
+  GENERATE_UUID() AS outbox_id,
+FROM mart_rows m
+WHERE ${incremental() ? `
+  m.date_col >= watermark_lower_bound
+  AND NOT EXISTS (
+    SELECT 1
+    FROM ${self()} e
+    WHERE 1=1
+  )
+` : "TRUE"}
+
+post_operations {
+  ${helper.setWatermarkLastProcessedAt({
+    watermarkRef: ref({ name: "01_DUMMY_TABLE", schema: "dataform" }),
+    tableName: self(),
+    timestampExpression: `
+    (
+      SELECT IFNULL(MAX((union_all.date_col)), CURRENT_DATE)
+      FROM (
+        SELECT
+          sm.date_col
+        FROM ${ref({ name: "01_DUMMY_TABLE" })} AS sm
+        WHERE sm.date_col >= CURRENT_DATE
+          AND sm.date_col >= DATE(CURRENT_DATE)
+      ) AS union_all
+    )`
+  })}
+}

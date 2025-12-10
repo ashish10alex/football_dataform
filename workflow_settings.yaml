@@ -6,3 +6,5 @@ vars: {
     "dummyColumnValue": "43"
 }
 defaultAssertionDataset: dataform_assertions
+defaultNotebookRuntimeOptions:
+  outputBucket: "gs://dataform-notebooks"
