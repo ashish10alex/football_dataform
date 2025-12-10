@@ -1,6 +1,16 @@
 config {
   type: 'table',
-  tags: ["nested", "one"]
 }
+  
+WITH ${utils.renderScript(
+   {
+    cteName: "TEST_CTE",
+    selectList: `
+    11 as qty,
+    "apple" as fruit
+    `,
+    sourceRef:ref("0100_NESTED_DATA")
+  }
+)}
 
-SELECT 4 AS TEST
+

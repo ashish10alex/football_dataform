@@ -1,0 +1,42 @@
+config {
+  type: 'table',
+  description: 'dummy table with many data types'
+}
+
+SELECT
+  -- Numeric types
+  1234567890                                          AS int64_col,           -- INT64
+  42                                                  AS int_col,             -- alias for INT64
+  1234567890123456789                                 AS bigint_col,          -- also INT64
+  1                                                   AS smallint_col,        -- INT64
+  123                                                 AS tinyint_col,         -- INT64
+  3.141                  AS float64_col,                                      -- FLOAT64
+  TRUE                                                AS bool_col,            --BOOL
+
+  -- String types
+  'Hello BigQuery'                                 AS string_col,          -- STRING
+
+  -- Bytes
+  FROM_BASE64('SGVsbG8gQmlnUXVlcnkh')                 AS bytes_col,           -- BYTES
+
+  -- Date & time types
+  DATE '2025-12-10'                                   AS date_col,            -- DATE
+  DATETIME '2025-12-10 14:30:45.123456'                AS datetime_col,        -- DATETIME
+  TIME '14:30:45.123456'                              AS time_col,             -- TIME
+  TIMESTAMP '2025-12-10 14:30:45.123456 America/Los_Angeles' AS timestamp_col, -- TIMESTAMP
+
+  -- Interval
+  INTERVAL 15 DAY                                             AS interval_col, -- INTERVAL
+
+  -- Array
+  [1, 2, 3, 5]                                          AS array_int64_col, -- ARRAY<INT64>
+  ['apple', 'banana', 'cherry']                         AS array_string_col, -- ARRAY<STRING>
+
+  -- Struct
+  STRUCT('Alice' AS name, 30 AS age, TRUE AS active)          AS struct_col, -- STRUCT<name STRING, age INT64, active BOOL>
+
+  -- Geography
+  ST_GEOGFROMTEXT('POINT(-122.4194 37.7749)')                 AS geography_col, -- GEOGRAPHY
+
+  -- JSON
+--   JSON '{"product": "laptop", "price": 999, "in_stock": true}' AS json_col,  -- JSON
