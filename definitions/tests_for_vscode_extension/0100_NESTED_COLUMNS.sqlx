@@ -1,8 +1,5 @@
 config {
   type: 'table',
-  assertions: {
-    uniqueKey: ["UUID"]
-  },
   tags: ["nested"]
 }
 

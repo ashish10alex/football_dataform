@@ -1,10 +1,10 @@
-dataformCoreVersion: 3.0.38
+dataformCoreVersion: 3.0.47
 defaultProject: drawingfire-b72a8
-defaultDataset: dataform
+defaultDataset: football_data
 vars: {
     "tableDescription": "something amazing",
     "dummyColumnValue": "43"
 }
-defaultAssertionDataset: dataform_assertions
+defaultAssertionDataset: football_data
 defaultNotebookRuntimeOptions:
   outputBucket: "gs://dataform-notebooks"

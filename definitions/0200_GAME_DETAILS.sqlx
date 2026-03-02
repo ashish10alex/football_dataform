@@ -1,6 +1,6 @@
 config {
   type: 'table',
-  schema: 'dataform',
+  schema: "football_data",
   description: 'Shows who scored goals for a specific Chelsea vs Arsenal game',
   tags: ["FOOTY"]
 }
@@ -38,6 +38,7 @@ WITH CHELSEA_GAMES_META AS (
 SELECT
   P.NAME AS PLAYER_NAME
   , E.*
+  , CURRENT_DATE() AS TOOL
 FROM GAME_EVENTS AS E
 LEFT JOIN
   PLAYERS AS P

@@ -1,0 +1,14 @@
+config {
+  type: 'table',
+}
+
+pre_operations {
+  DECLARE DATE_RANGE INT64 DEFAULT 356 * 3;
+  SELECT 1 AS A
+}
+
+SELECT 10 AS NUM
+
+post_operations {
+  SELECT 2 AS A
+}

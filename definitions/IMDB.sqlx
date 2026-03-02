@@ -1,0 +1,6 @@
+config {
+  type: 'table',
+  tags: ["imdb"]
+}
+
+SELECT * FROM ${ref("reviews")}

@@ -1,6 +1,6 @@
 config {
   type: 'view',
-  schema: 'dataform',
+  schema: "football_data",
   description: 'data for club',
   columns: {
     CLUB_ID: "unique identifier for the football club",
