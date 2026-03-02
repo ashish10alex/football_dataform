@@ -1,6 +1,6 @@
 config {
   type: 'table',
-  schema: 'dataform',
+  schema: 'football_dataform',
   description: 'Shows mox expensive manchester united player in each season',
   columns: {...{transfer_date: "date on which transfere from one club to another happened"}, ...docs.columnDescriptions}
 }
@@ -19,7 +19,7 @@ WITH TRANSFERS AS (
   FROM TRANSFERS
   WHERE
     1 = 1
-    AND O_CLUB_ID = ${params.MANCHESTER_UNITED_CLUB_ID}
+    AND TO_CLUB_ID = ${params.MANCHESTER_UNITED_CLUB_ID}
   ORDER BY TRANSFER_DATE DESC
 )
 
