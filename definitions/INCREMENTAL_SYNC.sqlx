@@ -1,0 +1,11 @@
+config {
+  type: "incremental",
+  schema: "football_data",
+  onSchemaChange: "EXTEND",
+}
+
+${
+    when(incremental(), 
+  `SELECT 1 as a, 2 as b, 3 as c, 4 as d, 5 as e, 6 as f, 7 as g`,
+  `SELECT 1 as a`
+)}
