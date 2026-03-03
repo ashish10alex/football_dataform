@@ -6,6 +6,6 @@ config {
 
 ${
     when(incremental(), 
-  `SELECT 1 as a, 2 as b`,
+  `SELECT 1 as a, 2 as b, 3 as c, 4 as d, 5 as e, 6 as f, 7 as g, 8 as h, 9 as i, 10 as j, 11 as k, 12 as l, 13 as m, 14 as n, 15 as o, 16 as p, 17 as q, 18 as r, 19 as s, 20 as t, 21 as u, 22 as v, 23 as w, 24 as x, 25 as y, 26 as z`,
   `SELECT 1 as a`
 )}
