@@ -1,0 +1,31 @@
+config {
+  type: 'table',
+  description: 'dummy table with many data types'
+}
+
+SELECT
+  1234567890                                                   AS INT64_COL
+  , 42                                                         AS INT_COL
+  , 1234567890123456789                                        AS BIGINT_COL
+  , 1                                                          AS SMALLINT_COL
+  , 123                                                        AS TINYINT_COL
+  , 3.141                                                      AS FLOAT64_COL
+  , CAST(0.1902305224 AS NUMERIC)                              AS NUMERIC_VALUE
+  , TRUE                                                       AS BOOL_COL
+
+  , 'Hello BigQuery'                                           AS STRING_COL
+
+  -- , FROM_BASE64('SGVsbG8gQmlnUXVlcnkh')                        AS BYTES_COL
+
+  , DATE '2025-12-10'                                          AS DATE_COL
+  , DATETIME '2025-12-10 14:30:45.123456'                      AS DATETIME_COL
+  , TIME '14:30:45.123456'                                     AS TIME_COL
+  , TIMESTAMP '2025-12-10 14:30:45.123456 America/Los_Angeles' AS TIMESTAMP_COL
+  , INTERVAL 15 DAY                                            AS INTERVAL_COL
+  , [1, 2, 3, 5] AS ARRAY_INT64_COL
+  , ['apple', 'banana', 'cherry'] AS ARRAY_STRING_COL
+
+  , STRUCT('Alice' AS NAME, 30 AS AGE, TRUE AS ACTIVE)         AS STRUCT_COL
+
+  , ST_GEOGFROMTEXT('POINT(-122.4194 37.7749)')                AS GEOGRAPHY_COL
+  , JSON '{"product": "laptop", "price": 999, "in_stock": true}' AS json_col
