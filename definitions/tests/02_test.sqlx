@@ -1,0 +1,28 @@
+config {
+  type: 'test',
+  dataset: '0100_CLUBS' // Name of the model you are tesing. NOT GCP project Id !
+  }
+
+input "CLUBS" {
+    SELECT 
+    "1" AS CLUB_ID
+  , "FCB" AS CLUB_CODE
+  , "Barcelona" AS NAME
+  , "La Liga" AS DOMESTIC_COMPETITION_ID
+  , "20" AS SQUAD_SIZE
+  , 29 AS AVERAGE_AGE
+  , "https://www.fcbarcelona.com/" AS URL
+
+}
+
+SELECT 
+
+    "1" AS CLUB_ID
+  , "FCB" AS CLUB_CODE
+  , "Barcelona" AS NAME
+  , "La Liga" AS DOMESTIC_COMPETITION_ID
+  , "20" AS SQUAD_SIZE
+  , 29 AS AVERAGE_AGE
+  , "Young" AS AGE_PROFILE
+  -- , "Old" AS AGE_PROFILE -- Will fail
+  , "https://www.fcbarcelona.com/" AS URL
