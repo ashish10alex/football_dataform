@@ -1,7 +1,7 @@
 
 
 test("0100_CLUBS_CASE_TEST_JS")
-  .dataset("0100_CLUBS")   // Name of the model you are tesing. NOT GCP project Id !
+  .dataset("0100_CLUBS")   // Name of the model / action you are tesing. NOT GCP dataset 
   // ${ref("CLUBS")} in 0100_CLUBS.sqlx gets substituted with this select statement
   .input("CLUBS", ` 
     SELECT 
