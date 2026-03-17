@@ -1,6 +1,6 @@
 config {
   type: 'test',
-  dataset: '0100_CLUBS' // Name of the model / action you are tesing. NOT GCP dataset
+  dataset: '0100_CLUBS' // Name of the action you are tesing. NOT GCP dataseet !
   }
 
 -- ${ref("CLUBS")} in 0100_CLUBS.sqlx gets substituted with this select statement
